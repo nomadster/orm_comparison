@@ -1,3 +1,4 @@
+//TODO: Generare la data che viene inserita perché ora guadagnamo un po' di tempo sul fatto che è pre-calcolata!
 var mysql = require('mysql');
 var LIMIT = process.env.LIMIT || 10000
 
