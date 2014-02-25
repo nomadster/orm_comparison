@@ -1,3 +1,4 @@
+//TODO: Testare 1.7.0-rc9
 var Sequelize = require('sequelize');
 var LIMIT = process.env.LIMIT || 10000;
 
