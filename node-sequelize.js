@@ -22,7 +22,7 @@ var tableName = 'test_sequelize';
 var Entry = sequelize.define(tableName, {
     string: {
         type: Sequelize.STRING, // VARCHAR(255)
-        allowNull: false,
+        allowNull: false//,
         /* get: function() {
                do your magic here and return something!
                 'this' allows you to access attributes of the model.
@@ -31,7 +31,7 @@ var Entry = sequelize.define(tableName, {
     },
     number: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: false//,
         // validate: {
         // http://sequelizejs.com/docs/latest/models#block-9-line-3
         // http://sequelizejs.com/docs/latest/models#block-12-line-0
@@ -56,7 +56,7 @@ Entry.sync() //oppure sequelize.sync() per syncare tutti i modelli definiti
         chainer.runSerially()
             .success(function(){
                 var duration = Date.now() -start;
-                console.log('node-sequelize timings for ' + LIMIT + 'inserts is ' + duration + ' ms');
+                console.log('node-sequelize timings for ' + LIMIT + ' inserts is ' + duration + ' ms');
                 process.exit();
             })
     })

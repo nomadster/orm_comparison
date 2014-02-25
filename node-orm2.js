@@ -42,7 +42,7 @@ orm.connect(conn_opts, function(err, db){
         var createEntryCallback = function(){
             if((++done) === LIMIT) {
                 duration = Date.now() - start
-                console.log('node-orm2 timings for ' + LIMIT + 'inserts is ' + duration + ' ms')
+                console.log('node-orm2 timings for ' + LIMIT + ' inserts is ' + duration + ' ms')
             }
             if(done < LIMIT)
                 createEntry(createEntryCallback);

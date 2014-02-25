@@ -47,7 +47,7 @@ var testInsert = function( afterInsert ){
         var createEntryCallback = function() {
             if((++done) === LIMIT){
                 duration = Date.now() - start;
-                console.log('node-mysql timings for ' + LIMIT + 'inserts is ' + duration + ' ms');
+                console.log('node-mysql timings for ' + LIMIT + ' inserts is ' + duration + ' ms');
             }
 
             if(done < LIMIT)

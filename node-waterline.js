@@ -36,7 +36,7 @@ new Entity({ adapters: { mysql: sailsMysql } }, function(err, Model){
     var createEntryCallback = function(){
         if((++done) === LIMIT){
             duration = Date.now() - start;
-            console.log('node-waterline timings for ' + LIMIT + 'inserts is ' + duration + ' ms')
+            console.log('node-waterline timings for ' + LIMIT + ' inserts is ' + duration + ' ms')
         }
         if(done < LIMIT)
             createEntry(createEntryCallback);
