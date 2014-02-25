@@ -1,3 +1,4 @@
+//TODO: Generare la data al momento dell'inserzione!
 var orm = require('orm');
 var LIMIT = process.env.LIMIT || 10000;
 
