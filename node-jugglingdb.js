@@ -8,9 +8,8 @@ var options = {
     host:'localhost',
     port: '3306',
     username: 'root', //Security FTW
-    database: database//,
-//    debug: true
-
+    database: database,
+    debug: false
 }
 //Devo installare jugglingdb-mysql!
 var mysqldb = new Schema('mysql', options);
@@ -35,7 +34,7 @@ var properties = {
 }
 
 
-var Entry = mysqldb.define(tableName, properties)
+var Entry = mysqldb.define('Entry', properties, { table: tableName});
 
 
 mysqldb.autoupdate(function(err){
