@@ -46,11 +46,15 @@ mysqldb.autoupdate(function(err){
             done = 0;
 
         var createEntry = function(cback){
+            // Entry.create({string: 'asdasdasd', number: Math.floor(Math.random() * 99999)}, function(err,entry){
+            //     if(err) throw err;
+            //     cback && cback();
+            // })
             var entry = new Entry({string: 'asdasdasd', number: Math.floor(Math.random() * 99999)});
-            entry.save(function(err,entry){
-                if(err) throw err;
+            entry.save(function(err, ee){
+                if (err) throw err;
                 cback && cback();
-            })
+            });
         }
 
         var createEntryCallback = function(){
